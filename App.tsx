@@ -26,7 +26,7 @@ function App() {
       {/* Intro Overlay */}
       {!permissionGranted && (
         <div className="absolute inset-0 z-[100] flex flex-col items-center justify-center bg-black/90 p-8 text-center">
-          <div className="max-w-2xl animate-fade-in-up">
+          <div className="max-w-2xl animate-[fadeInUp_0.8s_ease-out_forwards]">
             <h1 className="text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500">
               Cozy Cottage 3D
             </h1>
@@ -44,6 +44,8 @@ function App() {
                 • Camera access is required for the 3D effect.
               </p>
             </div>
+
+            <br />
 
             <button 
               onClick={startExperience}
@@ -103,6 +105,10 @@ function App() {
           20% { opacity: 1; transform: translate(-50%, -50%); }
           80% { opacity: 1; transform: translate(-50%, -50%); }
           100% { opacity: 0; transform: translate(-50%, -60%); }
+        }
+        @keyframes fadeInUp {
+          0% { opacity: 0; transform: translateY(20px); }
+          100% { opacity: 1; transform: translateY(0); }
         }
       `}</style>
     </div>

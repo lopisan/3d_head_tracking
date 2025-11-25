@@ -4,6 +4,13 @@ import { PerspectiveCamera, SoftShadows, Loader } from '@react-three/drei';
 import * as THREE from 'three';
 import { CottageRoom } from './CottageRoom';
 import { HeadPosition } from '../types';
+import { ThreeElements } from '@react-three/fiber';
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements extends ThreeElements {}
+  }
+}
 
 interface CameraRigProps {
   headPos: React.MutableRefObject<HeadPosition>;

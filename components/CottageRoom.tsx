@@ -2,6 +2,13 @@ import React, { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { Float } from '@react-three/drei';
+import { ThreeElements } from '@react-three/fiber';
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements extends ThreeElements {}
+  }
+}
 
 // --- VOXEL ENGINE ---
 // A simple reusable block component
