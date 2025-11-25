@@ -1,0 +1,7 @@
+{
+  "name": "Cottage Window 3D",
+  "description": "A 3D cottage scene that uses your webcam to track your head movement, creating a realistic holographic window effect.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
