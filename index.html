@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cottage Window 3D</title>
+    <!-- Keeping Tailwind CDN for simplicity in this specific setup -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body { margin: 0; overflow: hidden; background-color: #1a1a1a; }
@@ -15,18 +16,22 @@
   <script type="importmap">
 {
   "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "@react-three/drei": "https://aistudiocdn.com/@react-three/drei@^10.7.7",
     "@mediapipe/tasks-vision": "https://aistudiocdn.com/@mediapipe/tasks-vision@^0.10.22-rc.20250304",
     "@react-three/fiber": "https://aistudiocdn.com/@react-three/fiber@^9.4.0",
-    "three": "https://aistudiocdn.com/three@^0.181.2"
+    "three": "https://aistudiocdn.com/three@^0.181.2",
+    "@react-three/drei": "https://aistudiocdn.com/@react-three/drei@^10.7.7",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
   }
 }
 </script>
 </head>
   <body>
     <div id="root"></div>
+    <!-- This script tag is essential for Vite to bundle the application -->
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
